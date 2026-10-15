@@ -82,8 +82,50 @@ app.put("/equipamentos/:id", (req, res) => {
     }
 
     res.status(200).json({
-        mensagem: "Equipamento atualizado:",
+        mensagem: "Equipamento atualizado com sucesso:",
         equipamento: equipamentos[indice] = { id, ...req.body }
+    });
+});
+
+app.patch("/equipamentos/:id", (req, res) => {
+    const id = Number(req.params.id);
+    const indice = equipamentos.findIndex(equipamento => equipamento.id === id);
+
+    if (indice === -1) {
+        return res.status(404).json({
+            mensagem: "Equipamento não encontrado."
+        });
+    }
+
+    if (Object.keys(req.body).length === 0) {
+        return res.status(400).json({
+            mensagem: "Informe ao menos um campo para atualizar o equipamento."
+        });
+    }
+    
+    if (req.body.nome !== undefined) {
+        equipamentos[indice].nome = req.body.nome;
+    }
+
+    if (req.body.tipo !== undefined) {
+        equipamentos[indice].tipo = req.body.tipo;
+    }
+
+    if (req.body.raridade !== undefined) {
+        equipamentos[indice].raridade = req.body.raridade;
+    } 
+
+    if (req.body.dano !== undefined) {
+        equipamentos[indice].dano = req.body.dano;
+    }
+
+    if (req.body.nivel !== undefined) {
+        equipamentos[indice].nivel = req.body.nivel;
+    }
+
+    res.status(200).json({
+        mensagem: "Equipamento atualizado com sucesso:",
+        equipamento: equipamentos[indice]
     });
 });
 
