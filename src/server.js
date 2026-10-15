@@ -129,6 +129,26 @@ app.patch("/equipamentos/:id", (req, res) => {
     });
 });
 
+app.delete("/equipamentos/:id", (req, res) => {
+    const id = Number(req.params.id);
+    const indice = equipamentos.findIndex(equipamento => equipamento.id === id);
+
+    if (indice === -1) {
+        return res.status(404).json({
+            mensagem: "Equipamento não encontrado."
+        });
+    }
+
+    const equipamento = equipamentos[indice];
+
+    equipamentos.splice(indice, 1);
+
+    res.status(200).json({
+        mensagem: "Equipamento deletado com sucesso:",
+        equipamento: equipamento
+    });
+})
+
 app.listen(PORT, () => {
     console.log(`Arsenal Real API está rodando na porta ${PORT}.`);
 });
