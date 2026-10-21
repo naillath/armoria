@@ -1,4 +1,4 @@
-# ⚔️ Arsenal Real API
+# ⚔️ Armoria
 
 Uma API REST desenvolvida em **Node.js + Express** para gerenciar equipamentos de um arsenal.
 
@@ -8,7 +8,7 @@ Este projeto faz parte dos meus estudos de **desenvolvimento back-end**, com foc
 
 ## 🛡️ Sobre o projeto
 
-O **Arsenal Real API** permite cadastrar, consultar, atualizar e remover equipamentos através de uma API REST.
+O **Armoria** permite cadastrar, consultar, atualizar e remover equipamentos através de uma API REST.
 
 A aplicação utiliza um array em memória para armazenar os equipamentos e implementa as operações básicas de CRUD, incluindo validações na atualização completa dos registros.
 
@@ -29,7 +29,7 @@ A aplicação utiliza um array em memória para armazenar os equipamentos e impl
 ## 📂 Estrutura atual
 
 ```text
-arsenal-real/
+armoria/
 ├── node_modules/
 ├── src/
 │   └── server.js
@@ -46,13 +46,13 @@ arsenal-real/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/naillath/arsenal-real.git
+git clone https://github.com/naillath/armoria.git
 ```
 
 ### 2. Acesse a pasta
 
 ```bash
-cd arsenal-real
+cd armoria
 ```
 
 ### 3. Instale as dependências
@@ -76,7 +76,7 @@ http://localhost:3000
 Ao iniciar, o terminal deverá exibir:
 
 ```text
-Arsenal Real API está rodando na porta 3000.
+Armoria está rodando na porta 3000.
 ```
 
 ---
@@ -96,7 +96,7 @@ Retorna uma mensagem indicando que a API está online.
 Resposta:
 
 ```text
-Arsenal Real API está online.
+Armoria está online.
 ```
 
 ---
@@ -419,6 +419,6 @@ Este projeto tem como objetivo praticar os fundamentos do desenvolvimento **back
 
 ## ⚔️ Evolução
 
-O Arsenal Real API está sendo desenvolvido por etapas, com foco em compreender os fundamentos por trás de cada funcionalidade e construir uma base sólida em desenvolvimento back-end.
+Armoria está sendo desenvolvido por etapas, com foco em compreender os fundamentos por trás de cada funcionalidade e construir uma base sólida em desenvolvimento back-end.
 
-**Cada equipamento cadastrado, cada rota implementada e cada problema resolvido representam mais um passo na construção do arsenal.** ⚔️
+**Cada equipamento cadastrado, cada funcionalidade implementada e cada problema resolvido fortalecem os alicerces da Armoria.** ⚔️
