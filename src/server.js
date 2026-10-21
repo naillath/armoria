@@ -93,9 +93,14 @@ app.put("/equipamentos/:id", (req, res) => {
         });
     }
 
+    const equipamentoAtualizado = { id, ...req.body };
+    equipamentoAtualizado.id = id;
+
+    equipamentos[indice] = equipamentoAtualizado;
+
     res.status(200).json({
         mensagem: "Equipamento atualizado com sucesso:",
-        equipamento: equipamentos[indice] = { id, ...req.body }
+        equipamento: equipamentoAtualizado
     });
 });
 
