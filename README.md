@@ -1,6 +1,6 @@
 # ⚔️ Armoria
 
-Uma API REST desenvolvida em **Node.js + Express** para gerenciar equipamentos de um arsenal.
+Uma API REST desenvolvida com **Node.js e Express** para gerenciamento de equipamentos de um sistema de RPG.
 
 Este projeto faz parte dos meus estudos de **desenvolvimento back-end**, com foco em construção de APIs REST, rotas HTTP, manipulação de dados e operações CRUD.
 
@@ -64,7 +64,7 @@ npm install
 ### 4. Inicie o servidor
 
 ```bash
-node app.js
+node src/server.js
 ```
 
 O servidor será iniciado na porta:
