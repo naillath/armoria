@@ -32,8 +32,20 @@ app.get("/equipamentos/:id", (req, res) => {
 
 app.post("/equipamentos", (req, res) => {
     const dadosEquipamento = req.body;
-    const id = equipamentos.length + 1;
+
+    let id;
+
+    if (equipamentos.length === 0) {
+        id = 1;
+    } else {
+        const ids = equipamentos.map(equipamento => equipamento.id);
+        const maiorId = Math.max(...ids);
+
+        id = maiorId + 1;
+    }
+
     const novoEquipamento = { id, ...dadosEquipamento };
+    novoEquipamento.id = id;
     equipamentos.push(novoEquipamento);
     res.status(201).json({
         mensagem: "Equipamento registrado:",
