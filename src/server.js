@@ -7,7 +7,7 @@ app.use(express.json());
 const equipamentos = [];
 
 app.get("/", (req, res) => {
-    res.status(200).send("Arsenal Real API está online.");
+    res.status(200).send("Armoria está online.");
 });
 
 app.get("/equipamentos", (req, res) => {
@@ -162,5 +162,5 @@ app.delete("/equipamentos/:id", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Arsenal Real API está rodando na porta ${PORT}.`);
+    console.log(`Armoria está rodando na porta ${PORT}.`);
 });
